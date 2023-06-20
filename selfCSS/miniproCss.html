@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu{
+            list-style-type: none;
+        }
+        
+        .menu li a{
+            
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            margin: 40px;
+            width: 60px;
+            height: 60px;
+            color: var(--clr);
+            border: 2px solid var(--clr);
+            border-radius: 50%;
+            font-size: 1.5em;
+            transition: 1s;
+        }
+        .menu li a:hover{
+            transition: 0s;
+            background: var(--clr);
+            color: #333;
+            box-shadow: 0 0 10px var(--clr),
+            0 0 40px var(--clr),
+            0 0 50px var(--clr);
+        }
+        .menu .toggle{
+            margin-left: 60px;
+            color: #fff;
+            display: flex;
+            cursor: pointer;
+            font-size: 2em;
+        }
+        .s1{
+            margin-left: 20px;
+            color: #ff0066;
+        }
+        .s2{
+            margin-left: 15px;
+            color: yellow;
+        }
+        .s3{
+            margin-left: 15px;
+            color: #66ff66;
+        }
+        .s4{
+            margin-left: 38px;
+            color: #cc0099;
+        }
+        .s5{
+            margin-left: 38px;
+            color:#00ccff
+        }
+        .s6{
+            margin-left: 28px;
+            color:#ffcc00
+        }
+        .s7{
+            margin-left: 25px;
+            color: #9900cc;
+        }
+        .s8{
+            margin-left: 15px;
+            color: #00cc99;
+        }
+        /* second part */
+        *{
+            font-family: 'poppin', sans-serif;
+        }
+        body{
+            background: #0e1538;
+        }
+        a{
+            position: relative;
+            width: 150px;
+            height: 55px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+        a i{
+            position: absolute;
+            inset: -2px;
+            display: block;
+            border-radius: 50px;
+        }
+        a i,
+        a i:nth-child(2)
+        {
+            background: linear-gradient(45deg, red, #0e1538, #0e1538, blue);
+        }
+        a i:nth-child(2){
+            filter: blur(10px);
+        }
+        a span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            color: #fff;
+            letter-spacing: 2px;
+            /* border: 1px solid #040a29; */
+            border-radius: 50px;
+            background: rgba(14,21,56,0.65);
+            overflow: hidden;
+        }
+        a span::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.075);
+            transform: skew(25deg);
+        }
+        .sam{
+            position: absolute;
+            margin: 300px 0px 0px 120px;
+        }
+        .sam1{
+            position: absolute;
+            margin: 300px 0px 0px 1080px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <div class="toggle">
+            <li style="--i:0;--clr: #ff2972;"><a href="#"><ion-icon name="home-outline"></ion-icon></a><b class="s1">Home</b></li>
+            <li style="--i:1;--clr: #feeb00;"><a href="#"><ion-icon name="person-outline"></ion-icon></a><b class="s2">Person</b></li>
+            <li style="--i:2;--clr: #04fc43;"><a href="#"><ion-icon name="settings-outline"></ion-icon></a><b class="s3">Setting</b></li>
+            <li style="--i:3;--clr: #fe00f1;"><a href="#"><ion-icon name="mail-outline"></ion-icon></a><b class="s4">Mail</b></li>
+            <li style="--i:4;--clr: #00b0fe;"><a href="#"><ion-icon name="key-outline"></ion-icon></a><b class="s5">Key</b></li>
+            <li style="--i:5;--clr: #fea600;"><a href="#"><ion-icon name="videocam-outline"></ion-icon></a><b class="s6">Vcam</b></li>
+            <li style="--i:6;--clr: #a529ff;"><a href="#"><ion-icon name="game-controller-outline"></ion-icon></a><b class="s7">Game</b></li>
+            <li style="--i:7;--clr: #01bdab;"><a href="#"><ion-icon name="camera-reverse-outline"></ion-icon></a><b class="s8">Camera</b></li></div>
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </ul>
+    <div class="sam">
+        <a href="#">
+            <i></i><i></i>
+            <span>Cancel</span>
+        </a>
+    </div>
+    <div class="sam1">
+        <a href="#">
+            <i></i><i></i>
+            <span>Submit</span>
+        </a>
+    </div>
+</body>
+</html>
